@@ -5,7 +5,7 @@
 
 int main(int argc, char **argv) {
     printf("Running tests...\n\n");
-    /************ Part 1 Test Cases ************/
+    /************ Part 1 Test Cases ***********/
     char *str = "hello world!";
 
     int num_l = num_occurrences(str, 'l');
