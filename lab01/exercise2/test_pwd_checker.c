@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "pwd_checker.h"
 
+
 int main() {
     printf("Running tests...\n\n");
 
