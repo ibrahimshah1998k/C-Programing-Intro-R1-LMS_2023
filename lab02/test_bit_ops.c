@@ -17,6 +17,7 @@ void test_set_bit(unsigned x, unsigned n, unsigned v, unsigned expected) {
         printf("set_bit(0x%08x,%u,%u) returned 0x%08x but we expected 0x%08x\n",o,n,v,x,expected);
     } else {
         printf("set_bit(0x%08x,%u,%u) returned 0x%08x, correct\n",o,n,v,x);
+
     }
 }
 
