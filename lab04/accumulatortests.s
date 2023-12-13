@@ -29,6 +29,7 @@ Pass:
 End:
     jal exit
 
+
 print_int:
 	mv a1 a0
     li a0 1
