@@ -6,6 +6,7 @@ typedef struct node {
     struct node *next;
 } node;
 
+
 int ll_has_cycle(node *);
 
 #endif // LL_CYCLE_H
