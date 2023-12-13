@@ -1,60 +1,44 @@
-#include <string.h>
+#include <assert.h>
 #include <stdio.h>
+#include <string.h>
 #include "ex1.h"
-#include <stddef.h>
-/* Returns the number of times LETTER appears in STR.
-There are two different ways to iterate through a string.
-1st way hint: strlen() may be useful
-2nd way hint: all strings end in a null terminator */
-int num_occurrences(char *str, char letter) {
-    int i, count;
-    count = 0;
-    i=0;
-    while(str[i] != '\0')
-    {
-       
-        if(str[i] == letter)
-        {
-            count++;
-        }
+//#include "ex1.c"
+//mynameisibrahimshah
+int main(int argc, char **argv) {
+    printf("Running tests...\n\n");
+    /************ Part 1 Test Cases ************/
+    char *str = "hello world!";
 
-        i++;
-    }
-    return count;
-}
-/* Populates DNA_SEQ with the number of times each nucleotide appears.
-Each sequence will end with a NULL terminator and will have up to 20 nucleotides.
-All letters will be upper case. */
-void compute_nucleotide_occurrences(DNA_sequence *dna_seq) {
+    int num_l = num_occurrences(str, 'l');
+    assert(num_l == 3);
 
-    if (dna_seq == NULL) {
-        perror("Error");
-    }
-    /* Initialize the Counts in strctue to zero */
-     dna_seq->A_count =0;
-     dna_seq->C_count =0;
-     dna_seq->G_count =0;
-     dna_seq->T_count =0;
-    /* Count frequency of symbols 'A', 'C', 'G' and 'T' in DNA */
-    char *current;
-    for(current = dna_seq->sequence; *current; ++current) {
-        switch(*current){
-            case 'A':
-                ++dna_seq->A_count;
-                break;
-            case 'C':
-                ++dna_seq->C_count;
-                break;
-            case 'G':
-                ++dna_seq->G_count;
-                break;
-            case 'T':
-                ++dna_seq->T_count;
-                break;
-            default:
-                
-                break;
-        }
-    }
-    return;
+    int num_z = num_occurrences(str, 'z');
+    assert(num_z == 0);
+
+    /* TODO: Think of a scenario that is not tested by the current test cases. Create one additional test case to test this scenario. */
+
+    printf("Congrats! If you have made it to this line, your Part 1 Test cases are all passing!\n");
+
+    /************ Part 2 Test Cases ************/
+    DNA_sequence dna_seq_1;
+    strcpy(dna_seq_1.sequence, "ACTTTGAAC");
+    compute_nucleotide_occurrences(&dna_seq_1);
+    assert(dna_seq_1.A_count == 3);
+    assert(dna_seq_1.C_count == 2);
+    assert(dna_seq_1.G_count == 1);
+    assert(dna_seq_1.T_count == 3);
+
+    DNA_sequence dna_seq_2;
+    strcpy(dna_seq_2.sequence, "AAAACCC");
+    compute_nucleotide_occurrences(&dna_seq_2);
+    assert(dna_seq_2.A_count == 4);
+    assert(dna_seq_2.C_count == 3);
+    assert(dna_seq_2.G_count == 0);
+    assert(dna_seq_2.T_count == 0);
+
+    /* TODO: Think of a scenario that is not tested by the current test cases. Create one additional test case to test this scenario. */
+
+    printf("Congrats! If you have made it to this line, your Part 2 Test cases are all passing!\n");
+
+    return 0;
 }
