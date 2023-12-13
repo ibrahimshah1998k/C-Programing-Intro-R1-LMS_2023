@@ -22,6 +22,7 @@
  * and ends with a final #endif.  This prevents the file from being included
  * more than once which could've possibly resulted in an infinite loop of
  * file inclusions.
+ 
  *
  * First, we define the 'vector_t' datatype.  This next line says that a 'vector_t'
  * is the same as a 'struct vector_t'.  So anywhere in the code after this, we
