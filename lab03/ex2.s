@@ -10,6 +10,7 @@ source:
     .word   9
     .word   0
 dest:
+
     .word   0
     .word   0
     .word   0
