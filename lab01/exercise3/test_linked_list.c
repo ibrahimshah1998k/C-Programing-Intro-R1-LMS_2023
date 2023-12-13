@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
     int expected_values_2[] = {15, 12, 18};
     Node *curr_2 = head_2;
     for (int i = 0; i < 3; ++i) {
-        assert(curr_2->data == expected_values_2[i]);
+        assert(curr_2->data == expected_values_2[i]);                                // Errrrrrrrrrrrrrrrorrrrrrrrrrrrr
         curr_2 = curr_2->next;
     }
     free_list(head_2);
