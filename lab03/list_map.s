@@ -136,6 +136,7 @@ print_me_and_recurse:
     ecall
     addi a1, x0, ' '    # a0 gets address of string containing space
     addi a0, x0, 11     # Prepare for print char syscall
+    
     ecall
     lw a0, 4(t0)        # a0 gets address of next node
     jal x0, print_list  # Recurse. The value of ra hasn't been changed.
