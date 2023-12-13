@@ -164,6 +164,7 @@ check_arr_loop:
     j check_arr_loop
 check_arr_end:
     ret
+
     
 
 # This isn't really a function - it just prints a message, then
