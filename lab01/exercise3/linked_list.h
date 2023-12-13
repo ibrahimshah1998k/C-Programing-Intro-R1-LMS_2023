@@ -6,6 +6,7 @@ typedef struct Node {
     struct Node *next;
 } Node;
 
+
 Node *create_node(int data);
 void free_list(Node *head);
 void add_to_front(struct Node **head, int data);
