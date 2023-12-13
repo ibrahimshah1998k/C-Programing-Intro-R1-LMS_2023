@@ -13,6 +13,7 @@ int main(void) {
         nodes[i].value = 0;
     }
 
+    
     nodes[0].next = &nodes[1];
     nodes[1].next = &nodes[2];
     nodes[2].next = &nodes[3];
